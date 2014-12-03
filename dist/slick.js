@@ -62,14 +62,14 @@ angular.module('slick', []).directive('slick', [
               accessibility: scope.accessibility !== 'false',
               adaptiveHeight: scope.adaptiveHeight === 'true',
               arrows: scope.arrows !== 'false',
-              asNavFor: scope.asNavFor ? scope.asNavFor : null,
-              appendArrows: scope.appendArrows ? $(appendArrows) : null,
+              asNavFor: scope.asNavFor ? scope.asNavFor : undefined,
+              appendArrows: scope.appendArrows ? $(appendArrows) : undefined,
               autoplay: scope.autoplay === 'true',
               autoplaySpeed: scope.autoplaySpeed != null ? parseInt(scope.autoplaySpeed, 10) : 3000,
               centerMode: scope.centerMode === 'true',
               centerPadding: scope.centerPadding || '50px',
               cssEase: scope.cssEase || 'ease',
-              customPaging: scope.customPaging || null,
+              customPaging: scope.customPaging || undefined,
               dots: scope.dots === 'true',
               draggable: scope.draggable !== 'false',
               easing: scope.easing || 'linear',
@@ -77,7 +77,7 @@ angular.module('slick', []).directive('slick', [
               infinite: scope.infinite !== 'false',
               initialSlide: scope.initialSlide || 0,
               lazyLoad: scope.lazyLoad || 'ondemand',
-              onBeforeChange: scope.onBeforeChange || null,
+              onBeforeChange: scope.onBeforeChange || undefined,
               onAfterChange: function (sl, index) {
                 if (scope.onAfterChange) {
                   scope.onAfterChange();
@@ -97,10 +97,10 @@ angular.module('slick', []).directive('slick', [
                   return sl.slideHandler(currentIndex);
                 }
               },
-              onReInit: scope.onReInit || null,
-              onSetPosition: scope.onSetPosition || null,
+              onReInit: scope.onReInit || undefined,
+              onSetPosition: scope.onSetPosition || undefined,
               pauseOnHover: scope.pauseOnHover !== 'false',
-              responsive: scope.responsive() || null,
+              responsive: scope.responsive() || undefined,
               rtl: scope.rtl === 'true',
               slide: scope.slide || 'div',
               slidesToShow: scope.slidesToShow != null ? parseInt(scope.slidesToShow, 10) : 1,
